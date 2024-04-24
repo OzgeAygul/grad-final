@@ -1,0 +1,174 @@
+[meta title:"Ozge AYGUL"/]
+
+[Header
+      title:"Dynamic Course Scheduling for Strategic University Scaling"
+      subtitle:"via Mathematical Optimization"
+      author:"Özge Aygül"
+      authorLink:"https://www.linkedin.com/in/ozgekoc/"/]
+[div className:"line"][/div]
+[br/]
+
+[div className:"text"]
+    [p][span className:"emphasize"]Timetabling[/span] or [span className:"emphasize"]course scheduling[/span] , is a key driver of efficient space management in higher education.
+    University timetabling involves the challenging process of allocating courses to locations and times while ensuring a diverse range of university specific constraints.
+    Optimizing for a variety of utilization-related objectives generates optimal assignments that can reveal institutional capacity of available spaces.
+    This optimization-based approach enhances the ability of universities to optimize the use of their facilities and resources, ultimately leading to cost savings and improved operational efficiency.[/p]
+
+    Optimization-driven approaches offer optimal or best near-optimal solutions to these challenges, allowing for rapid and efficient adjustments to schedules via a wide range of constraints and objective functions.
+    We aim to address an important question that universities face regarding sustainable resource allocation encountering a fluctuating number of students on campus.
+    Specifically, this study is motivated by the question of how to efficiently use teaching and lab space capacity under yearly enrollment fluctuations due to university registration expansion and contraction.
+    We propose a framework that allows universities to simulate an expansion and/or contraction scenario and reveal instructional capacity on the campus while honoring instructor preferences and space limitations.
+    The presence of overlapping instructor preferences and need to maintain responsible classroom densities leads to conflicts that we refer to as [b]bottleneck sections[/b].
+    We propose to dynamically address bottleneck sections by relaxing reduced capacity and splitting larger sections into available locations and time patterns.
+    To achieve this, we introduce a multi-objective mixed-integer nonlinear optimization formulation that hierarchically orders the competing objective functions such as accommodating soft instructor preferences and minimizing unused seats and the number of open locations while ensuring timetable-related constraints.
+
+    [br/]
+
+
+    ### What type of optimization is this?
+    You've probably heard the term **optimization** used in various contexts, suggesting the idea of making things better or more efficient.
+    However, mathematical optimization is a specific and powerful form of optimization that uses mathematical formulas to find the best possible solutions to complex problems.
+
+    [img src:"static/images/arrow.svg" className:"arrow"/]
+[/div]
+
+
+// Scroller Tutorial
+[var name:"Step" value:0 /]
+[Scroller currentStep:Step]
+
+  [Graphic]
+    // Display the SVG only for the specific step
+    [img src:"static/images/variables.svg" className:`Step === 0 ? "visible equation" : "invisible equation"` /]
+  [/Graphic]
+   [Graphic]
+    [img src:"static/images/constraints.svg" className:`Step === 1 ? "visible constraints" : "invisible constraints"` /]
+  [/Graphic]
+  [Graphic]
+    [img src:"static/images/obj1.svg" className:`Step === 3 ? "visible obj1" : "invisible obj1"` /]
+  [/Graphic]
+    [Graphic]
+    [img src:"static/images/obj2.svg" className:`Step === 4 ? "visible obj2" : "invisible obj2"` /]
+  [/Graphic]
+      [Graphic]
+    [img src:"static/images/obj3.svg" className:`Step === 5 ? "visible obj3" : "invisible obj3"` /]
+  [/Graphic]
+        [Graphic]
+    [img src:"static/images/obj4.svg" className:`Step === 6 ? "visible obj4" : "invisible obj4"` /]
+  [/Graphic]
+
+  [Step]
+    [p]Think of mathematical optimization like a really smart way to make the best choices possible. [/p]
+    Imagine you've got a bunch of options—those are your **decision variables**. They're the things you can tweak to change the outcome.
+  [/Step]
+
+  [Step]
+    [p]Now, you can't just do whatever you want; you've got some rules to follow—those are your **system of constraints**.[/p]
+    They keep everything in check and make sure you're playing fair.
+  [/Step]
+
+ [Step]
+    [p]And finally, you've got your goal or what we call the **objective function**.[/p]
+    Unlike simple goals, often you’re juggling **multiple objectives**, aiming to maximize things like profits and efficiency while simultaneously minimizing costs and waste.
+    For the dynamic splitting and capacity expansion formulation, we propose four objective functions to prioritize efficient use of classrooms and honor instructor preferences.
+  [/Step]
+
+   [Step]
+    [p]The first objective function aims to maximize the number of course sections assigned, while minimizing capacity relaxation and the number of splits.[/p]
+    The values of  [Equation]\rho_1 [/Equation] and [Equation]\rho_2 [/Equation]  are intentionally set to create a preferred sequence of priorities in an ordered fashion
+    [/Step]
+
+    [Step]
+    [p]The second objective function aims to maximize the (soft) preferences of instructors.[/p]
+    [/Step]
+
+    [Step]
+    [p]Third is to minimize the total number of teaching and lab spaces to improve locational efficiency by fitting more course sections into the space made available.[/p]
+    [/Step]
+
+    [Step]
+    [p]The fourth objective is to optimize the assignments in a manner that minimizes unused capacity in each location, seeking efficient utilization of all used resources.[/p]
+    [/Step]
+
+    [Step]
+      [p]Now, let's dive into how these utilization-related objectives significantly alter the results of the timetabling process.
+       We'll examine the direct impacts of efficient space management and resource utilization on the overall scheduling effectiveness.[/p]
+    [/Step]
+
+
+[/Scroller]
+
+### How utilization of available space changes at WPI?
+Below are two treemaps representing the utilization of teaching and lab spaces at WPI.
+The first treemap displays the current or "actual" usage of spaces based on existing scheduling and space allocation. This visualization shows how resources are currently managed without the application of advanced optimization techniques.
+The second treemap illustrates an "optimized" scenario where the objective function [Equation] f_4(\cdot) [/Equation] is fully leveraged. This function focuses on optimizing the assignments to minimize unused capacity in each location, thereby seeking the most efficient utilization of all used resources.
+[var name:"iframeSrc" value:"https://ozgeaygul.github.io/grad-final/treemap_actual.html" /]
+
+[Button onClick:`iframeSrc = 'https://ozgeaygul.github.io/grad-final/treemap_actual.html'`]Actual[/Button]
+[Button onClick:`iframeSrc = 'https://ozgeaygul.github.io/grad-final/treemap_optimized.html'`]Optimized[/Button]
+
+[iframe src:`iframeSrc` width:"110%" height:"750px" style:`{border:"none", overflow:"hidden"}` /]
+
+Now, let's look at the how utilization of teaching and lab space changes.
+For this experiment, we did not allow laboratories to be filled up to 90% and teaching space to 70%.
+In addition, all fours objectives are set in a hierarchical manner.
+
+[var name:"iframeSrc2" value:"https://ozgeaygul.github.io/grad-final/utilization_scatter.html" /]
+[iframe src:`iframeSrc2` width:"150%" height:"750px" style:`{border:"none", overflow:"hidden"}` /]
+
+
+### Does WPI have enough space to admit more students?
+
+Let's see what would happen if WPI admits less or more students in the following 4 years.
+Since hard faculty preferences are considered, in every scenario, we have extra course sections.
+But for some scenarios, we see a sharp increase in the increase in the additional number of sections.
+
+[img src:"static/images/arrow.svg" className:"arrow"/]
+
+[var name:"scrollerChartIndex" value:0 /]
+[var name:"scrollerChartData" value:`[
+  { x: -150, y: 8 },
+  { x: -100, y: 11 },
+  { x: -50, y: 16 },
+  { x: 0, y: 19 },
+  { x: 50, y: 27 },
+  { x: 100, y: 31 },
+  { x: 150, y: 44 },
+]` /]
+
+[Scroller currentStep:scrollerChartIndex]
+  [Graphic style:`{padding: 150}`]
+      [Chart
+        type:`"line"`
+        data:`scrollerChartData.slice(0, scrollerChartIndex + 2)`
+        animate:`{ duration: 1000 }`
+        x:`'x'`
+        y:`'y'`
+        domain:`[-150, 150]`
+        range:`[5, 50]`
+        /]
+  [/Graphic]
+
+  [Step]## Hey, neat, here's some data![/Step]
+  [Step]## ...   [/Step]
+  [Step]## ...  What's that more data?![/Step]
+  [Step]## Hmm...[/Step]
+  [Step]## Too much data.[/Step]
+  [Step]## Stop.[/Step]
+[/Scroller]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

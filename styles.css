@@ -1,0 +1,260 @@
+/* Formatting text portion for tutorial */
+.article-header {
+  margin-top: 15vh;
+  margin-bottom: 30px;
+}
+
+.line {
+  background-color: black;
+  height: 0.10em;
+  margin-bottom: 4vh;
+}
+
+.arrow {
+  transform: scale(0.5);
+}
+
+.idyll-text-container {
+  width: 90vw;
+  max-width: 80vw !important; /* so not restricted to 600px */
+}
+
+/* Center imgs */
+.arrow, figcaption {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Some text and pre formatting */
+a {
+  color: #5BAFC1;
+  text-decoration: underline;
+}
+
+figcaption {
+  max-width: 30vw;
+  text-align: center;
+}
+
+figcaption p {
+  font-size: 0.8em !important;
+}
+
+h1, h2, h3 {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #5BAFC1;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+.byline {
+  font-size: 0.9em;
+}
+
+.text p, .idyll-step {
+  font-family: 'Open Sans', Verdana, Geneva, sans-serif;
+  font-size: 14px;
+}
+
+
+
+.emphasize {
+  background-color: rgb(248, 241, 201);
+  color: black;
+  font-weight: bold;
+  font-size: 0.9em;
+  padding: 0.25em;
+}
+
+.highlight pre, .code pre {
+  height: 50vh;
+}
+
+.idyll-root {
+  box-sizing: border-box;
+  margin: 0 0;
+  padding: 0;
+  margin-bottom: 60px;
+}
+
+/* Some formatting for the scroll and step boxes */
+.idyll-scroll {
+  margin-top: 0;
+  width: 100vw;
+}
+
+/* Move the steps up and shorten them */
+.idyll-scroll-text .idyll-step {
+  max-width: 45vw;
+  position: relative;
+  top: -185vh;
+  padding: 4vw;
+}
+
+
+/* CSS for scroller portion of tutorial to follow along */
+.equation, .obj1, .obj2, .obj3, .obj4 {
+  background: transparent;
+  transition: opacity 1s ease;
+  margin-left: auto;
+  margin-right: 0;
+  display: block;
+}
+
+.constraints {
+  width: 40%;
+  height: auto;
+  background: transparent;
+  transition: opacity 1s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Animations */
+.visible {
+    opacity: 1;
+  }
+
+.invisible {
+    opacity: 0;
+    display: block;
+    pointer-events: none;
+  }
+
+/* Change graphic background based on Scroller id */
+#idyll-scroll-0 .idyll-scroll-graphic {
+  background:  rgb(241, 239, 224);
+}
+
+#idyll-scroll-1 .idyll-scroll-graphic {
+  background: #5BAFC1;
+}
+
+/* Decrease the margin depending on window size for steps */
+@media only screen and (min-width: 600px) {
+  .idyll-scroll-text .idyll-step {
+    padding: 2vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+.equation,.obj3, .obj4 {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 20vw;
+    margin-left: auto;
+    margin-right: 5vw;
+  }
+
+  .obj1 {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 27vw;
+    margin-left: auto;
+    margin-right: 5vw;
+  }
+
+  .obj2 {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 27vw;
+    margin-left: auto;
+    margin-right: 5vw;
+  }
+
+    .obj4 {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 27vw;
+    margin-left: auto;
+    margin-right: 5vw;
+  }
+
+
+
+ .constraints {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .equation {
+   top: 0px;
+  }
+
+  .obj1, .obj2, .obj3, .obj4 {
+    top: 0;
+  }
+
+   .constraints {
+    width: 50vw;
+    top: 50%;
+    transform: translateY(-50%);  /* Correct vertical centering */
+  }
+
+  .text p, .idyll-step {
+    font-size: 15px;
+  }
+
+  .idyll-scroll-text .idyll-step {
+    max-width: 40vw;
+  }
+
+  .idyll-text-container {
+  position: relative;
+    width: 45vw;
+  }
+
+.idyll-scroll-container .svg {
+    position: relative;
+    width: 20vw;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .equation, .obj1, .obj2, .obj3, .obj4 {
+    margin-right: 5vw;
+    width: 25vw;
+  }
+
+  .text p, .idyll-step, p {
+    font-size: 25px;
+  }
+
+  pre {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 2.7em;
+  }
+
+  h2 {
+    font-size: 1.7em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+}
+
