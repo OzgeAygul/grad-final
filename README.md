@@ -16,7 +16,7 @@ The source code for the Idyll narrative components is hosted in the `gh-pages` b
 ## Interactive Visualizations
 
 - **Treemap**: An interactive treemap visualization shows the actual vs. optimized usage of university spaces, allowing users to explore space efficiency at a granular level.
-- **Scatter Plot**: This plot contrasts actual and optimized space utilization over time, with bubble sizes representing space capacity, offering insights into optimization potential.
+- **Scatter Plot**: This plot contrasts actual and optimized space utilization in two dimensions, with bubble sizes representing space capacity, offering insights into mathematical optimization potential.
 - **Tradeoff Visualization**: A dynamic visualization that illustrates the trade-offs between increasing student enrollment and the required number of course sections.
 
 
@@ -40,11 +40,11 @@ These achievements contribute to a sophisticated yet user-friendly interface tha
 - Screencast Demonstration: [[link](https://vimeo.com/939209697/3eb265a8ca?share=copy)]
 - Process Book: [[link](https://ozgeaygul.github.io/grad-final/Process_Book_OzgeAygul.pdf)]
 
-## Non-Obvious Features
+## Obvious and Non-Obvious Features
 
 - Interactive elements within the treemaps allow users to drill down for detailed data.
 - The scatterplot visualization includes a feature for users to select specific data points and see related information.
-- Our tradeoff visualization dynamically updates as users scroll, providing an engaging narrative experience.
+- The tradeoff visualization dynamically updates as users scroll, providing an engaging narrative experience.
 
 I invite you to explore the website, interact with the data, and learn about the power of optimization in university settings.
 ## References
