@@ -19,7 +19,17 @@ This repository contains the code and resources for a scrollytelling website tha
 
 ## Technical and Design Achievements
 
-I've implemented a responsive design to ensure improved navigation cues for better user engagement.
+My project showcases several technical and design achievements:
+
+- **Responsive Design**: The website adapts seamlessly across different devices, enhancing accessibility and usability.
+- **Advanced Interactivity**: Interactive elements and responsive visualizations actively engage users, fostering a deeper understanding of data insights.
+- **Design Principles**: I adhered to key design principles including:
+  - **Hierarchy**: Visual hierarchy is used effectively to guide the user’s attention to the most important data first.
+  - **Consistency**: The visual and interaction design across the website is consistent, enhancing the user's learning curve and comfort with navigating complex information.
+  - **Simplicity**: The interface is designed to be clean and uncluttered, prioritizing ease of use and minimizing cognitive overload.
+  - **Color Usage**: Colors are used not just for aesthetic but strategically to denote different data types and to highlight critical data points.
+
+These achievements contribute to a sophisticated yet user-friendly interface that makes complex optimization data accessible and engaging to non-expert stakeholders.
 
 ## Project Links
 
@@ -33,7 +43,7 @@ I've implemented a responsive design to ensure improved navigation cues for bett
 - The scatterplot visualization includes a feature for users to select specific data points and see related information.
 - Our tradeoff visualization dynamically updates as users scroll, providing an engaging narrative experience.
 
-We invite you to explore the website, interact with the data, and learn about the power of optimization in university settings.
+I invite you to explore the website, interact with the data, and learn about the power of optimization in university settings.
 ## References
 
 - For the narrative storytelling and interactive components, Idyll was utilized. More information can be found in their [documentation](https://idyll-lang.org/docs/components).
