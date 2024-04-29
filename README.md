@@ -6,7 +6,7 @@ This repository contains the code and resources for a scrollytelling website tha
 
 ## Code Repository
 
-The source code for the Idyll narrative components is hosted in the `gh-pages` branch of our GitHub repository. 
+The source code for the Idyll narrative components is hosted in the `gh-pages` branch of my GitHub repository. 
 
 ## Contents
 
