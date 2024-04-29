@@ -8,7 +8,7 @@ This repository contains the code and resources for a scrollytelling website tha
 
 - `python_codes/`: Code developed for the project's interactive visualizations.
 - `lib/`: External libraries used, including Idyll for scrollytelling and d3.js for dynamic visualizations.
-- `data/`: Dataset used in the visualizations, provided by WPI and processed by our mathematical optimization algorithm.
+- `data/`: Dataset used in the visualizations, processed by our mathematical optimization algorithm. Data provided by WPI is not included.
 
 ## Interactive Visualizations
 
