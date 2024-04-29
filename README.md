@@ -11,7 +11,6 @@ The source code for the Idyll narrative components is hosted in the `gh-pages` b
 ## Contents
 
 - `python_codes/`: Code developed for the project's interactive visualizations.
-- `lib/`: External libraries used, including Idyll for scrollytelling and d3.js for dynamic visualizations.
 - `data/`: Dataset used in the visualizations, processed by our mathematical optimization algorithm. Data provided by WPI is not included.
 
 ## Interactive Visualizations
