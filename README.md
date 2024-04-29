@@ -1,4 +1,4 @@
-# Project Title: Dynamic Course Scheduling via Mathematical Optimization
+## Dynamic Course Scheduling for Strategic University Scaling via Mathematical Optimization
 
 ## Overview
 
@@ -12,16 +12,14 @@ This repository contains the code and resources for a scrollytelling website tha
 
 ## Interactive Visualizations
 
-Our project includes several types of interactive visualizations:
-- Treemaps for comparing classroom utilization
-- Scatterplots for highlighting space optimization
-- Tradeoff visualizations to explore the impact of increased student numbers
+- **Treemap**: An interactive treemap visualization shows the actual vs. optimized usage of university spaces, allowing users to explore space efficiency at a granular level.
+- **Scatter Plot**: This plot contrasts actual and optimized space utilization over time, with bubble sizes representing space capacity, offering insights into optimization potential.
+- **Tradeoff Visualization**: A dynamic visualization that illustrates the trade-offs between increasing student enrollment and the required number of course sections.
 
-Each visualization is designed to be user-friendly and informative, with interactivity at its core.
 
-## Technical and Design Improvements
+## Technical and Design Achievements
 
-We've implemented a responsive design to ensure accessibility across devices and improved navigation cues for better user engagement. We plan to further refine these elements based on user feedback.
+I've implemented a responsive design to ensure improved navigation cues for better user engagement.
 
 ## Project Links
 
@@ -36,6 +34,10 @@ We've implemented a responsive design to ensure accessibility across devices and
 - Our tradeoff visualization dynamically updates as users scroll, providing an engaging narrative experience.
 
 We invite you to explore the website, interact with the data, and learn about the power of optimization in university settings.
+## References
+
+- For the narrative storytelling and interactive components, Idyll was utilized. More information can be found in their [documentation](https://idyll-lang.org/docs/components).
+- The website's structure was inspired by and based upon the template provided by Megan Vo's [Stacked Scrolling Tutorial](https://github.com/megan-vo/stacked-scrolling-tutorial).
 
 ## Acknowledgements
 
