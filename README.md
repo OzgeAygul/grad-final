@@ -4,6 +4,10 @@
 
 This repository contains the code and resources for a scrollytelling website that demystifies mathematical optimization in university scheduling for nonexpert stakeholders. My aim is to make complex algorithms accessible and relatable through interactive storytelling and data visualization.
 
+## Code Repository
+
+The source code for the Idyll narrative components is hosted in the `gh-pages` branch of our GitHub repository. 
+
 ## Contents
 
 - `python_codes/`: Code developed for the project's interactive visualizations.
